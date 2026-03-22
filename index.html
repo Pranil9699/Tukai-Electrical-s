@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tukai Electricals | Powering Your World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#fff7ed",
+                100: "#ffedd5",
+                500: "#f97316", // Vibrant Orange Accent
+                600: "#ea580c",
+                900: "#7c2d12",
+              },
+              neutral: {
+                850: "#171717",
+                950: "#0a0a0a",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+            animation: {
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          to bottom,
+          rgba(10, 10, 10, 0.4),
+          rgba(10, 10, 10, 0.95)
+        );
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      body {
+        background-color: #0a0a0a;
+        color: #e5e5e5;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #262626;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans selection:bg-brand-500 selection:text-white custom-scrollbar"
+  >
+    <!-- Header -->
+    <header
+      class="fixed top-0 w-full z-50 glass-card border-t-0 border-x-0 transition-all duration-300"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <div
+            class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </div>
+          <span class="font-display font-bold text-xl tracking-tight text-white"
+            >तुकाई इलेक्ट्रिकल्स</span
+          >
+        </div>
+
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400"
+        >
+          <a href="#about" class="hover:text-brand-500 transition-colors"
+            >About</a
+          >
+          <a href="#services" class="hover:text-brand-500 transition-colors"
+            >Services</a
+          >
+          <a href="#products" class="hover:text-brand-500 transition-colors"
+            >Products</a
+          >
+          <a href="#gallery" class="hover:text-brand-500 transition-colors"
+            >Showcase</a
+          >
+          <a
+            href="#contact"
+            class="px-5 py-2.5 bg-brand-500 text-white rounded-full hover:bg-brand-600 transition-all shadow-lg shadow-brand-500/20"
+            >Get Support</a
+          >
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <button class="md:hidden text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="w-full h-full">
+          <img
+            src="https://opal.google/board/blobs/3299c062-41a1-4f12-8115-5a6e7f787c08"
+            alt="Elite Electrical Background"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="space-y-8">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-xs font-bold tracking-widest uppercase"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"
+              ></span>
+            </span>
+            The Gold Standard in Electrical
+          </div>
+          <h1
+            class="font-display text-5xl lg:text-7xl font-extrabold leading-tight text-white"
+          >
+            Powering Your World with
+            <span class="text-brand-500">Precision</span>.
+          </h1>
+          <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+            Tukai Electrical's is a premier provider of high-quality electrical
+            products and professional maintenance services for residential and
+            commercial needs.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#services"
+              class="px-8 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-all hover:scale-105 shadow-xl shadow-brand-500/30"
+            >
+              Explore Services
+            </a>
+            <a
+              href="#products"
+              class="px-8 py-4 bg-white/5 text-white font-bold rounded-xl hover:bg-white/10 border border-white/10 transition-all backdrop-blur-md"
+            >
+              View Products
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:block relative">
+          <div
+            class="absolute -inset-4 bg-brand-500/20 blur-3xl rounded-full animate-pulse-slow"
+          ></div>
+          <div
+            class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+          >
+            <img
+              src="https://opal.google/board/blobs/6a758522-6b4f-4a65-9bde-fabeb93c2b4d"
+              alt="Electrical Work"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-neutral-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="relative group">
+              <div
+                class="absolute -inset-2 bg-gradient-to-r from-brand-500 to-orange-800 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity"
+              ></div>
+              <img
+                src="https://opal.google/board/blobs/cf67d3e1-01c7-4dde-88e9-1b4f5c253bc2"
+                alt="Materials Showcase"
+                class="relative rounded-2xl w-full object-cover aspect-video shadow-2xl"
+              />
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 space-y-6">
+            <h2 class="font-display text-4xl font-bold text-white italic">
+              About Tukai Electricals Solutions
+            </h2>
+            <div class="w-20 h-1.5 bg-brand-500 rounded-full"></div>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              Founded on the principles of reliability and technical expertise,
+              Tukai Electricals Solutions has grown into a cornerstone of the
+              local electrical trade. We understand that electricity is the
+              lifeblood of any modern space, which is why we never compromise on
+              quality.
+            </p>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              Our team consists of seasoned professionals who are passionate
+              about helping customers navigate the complexities of electrical
+              systems, ensuring every wire laid and every light installed meets
+              the highest standards of excellence.
+            </p>
+            <div class="p-6 glass-card rounded-2xl border-l-4 border-brand-500">
+              <h4 class="text-white font-bold mb-2">
+                The "Total Support" Guarantee
+              </h4>
+              <p class="text-sm text-gray-500">
+                We bridge the gap between premium product retail and expert
+                technical execution, providing highest-grade components backed
+                by professional installation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 w-1/3 h-full bg-brand-500/5 blur-3xl rounded-full -mr-20"
+      ></div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="font-display text-4xl font-bold text-white mb-4">
+            Professional Services
+          </h2>
+          <p class="text-gray-500 max-w-2xl mx-auto">
+            Expert technical execution for every project, from small repairs to
+            industrial installations.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="group relative p-8 glass-card rounded-3xl transition-all hover:-translate-y-2"
+          >
+            <div
+              class="mb-6 w-14 h-14 bg-brand-500/20 rounded-2xl flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Professional Repair & Maintenance
+            </h3>
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Electrical faults can be disruptive and dangerous. Our certified
+              technicians provide prompt, reliable repair services for household
+              wiring, appliances, and industrial components.
+            </p>
+            <img
+              src="https://opal.google/board/blobs/437e2cf0-5f1f-412c-9345-6b73182e817a"
+              alt="Repair Service"
+              class="w-full h-48 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="group relative p-8 glass-card rounded-3xl transition-all hover:-translate-y-2"
+          >
+            <div
+              class="mb-6 w-14 h-14 bg-brand-500/20 rounded-2xl flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Expert Technical Guidance
+            </h3>
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Choosing the right electrical components requires more than just a
+              guess. We provide personalized consultations to help you select
+              wire gauges, pipe materials, and AC tonnage.
+            </p>
+            <img
+              src="https://opal.google/board/blobs/a30a8008-9ee2-4bd5-84fa-e79fcdd78d0d"
+              alt="Expert Advice"
+              class="w-full h-48 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-neutral-900/50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+        >
+          <div>
+            <h2 class="font-display text-4xl font-bold text-white mb-4">
+              Our Product Inventory
+            </h2>
+            <p class="text-gray-500 max-w-xl">
+              Curated selection of industry-leading brands for your
+              infrastructure and home comfort needs.
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <span
+              class="px-4 py-2 bg-brand-500 rounded-full text-xs font-bold text-white uppercase tracking-widest"
+              >Premium Stock</span
+            >
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 1 -->
+          <div
+            class="group glass-card rounded-2xl overflow-hidden hover:border-brand-500/50 transition-colors"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://opal.google/board/blobs/9547e34e-28be-4e36-960e-26f9fe83fbca"
+                alt="Lighting"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-white mb-2">
+                Lighting & Ambience
+              </h3>
+              <p class="text-xs text-gray-500 leading-relaxed">
+                LED bulbs, energy-efficient solutions, and exquisite decorative
+                lighting collections.
+              </p>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div
+            class="group glass-card rounded-2xl overflow-hidden hover:border-brand-500/50 transition-colors"
+          >
+            <div
+              class="h-48 overflow-hidden bg-brand-900/20 flex items-center justify-center p-4"
+            >
+              <img
+                src="https://opal.google/board/blobs/cf67d3e1-01c7-4dde-88e9-1b4f5c253bc2"
+                alt="Infrastructure"
+                class="w-full h-full object-cover rounded-lg group-hover:rotate-3 transition-transform"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-white mb-2">Infrastructure</h3>
+              <p class="text-xs text-gray-500 leading-relaxed">
+                Premium-grade, fire-retardant wires and heavy-duty PVC conduit
+                materials.
+              </p>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div
+            class="group glass-card rounded-2xl overflow-hidden hover:border-brand-500/50 transition-colors"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwFdkEk3m26R69GeUeaVXMyDbeJrb1G8b1Q&s"
+                alt="Cooling"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-white mb-2">
+                Cooling & Comfort
+              </h3>
+              <p class="text-xs text-gray-500 leading-relaxed">
+                High-velocity fans, energy-efficient coolers, and
+                state-of-the-art AC units.
+              </p>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div
+            class="group glass-card rounded-2xl overflow-hidden hover:border-brand-500/50 transition-colors"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://adityaretail.com/wp-content/uploads/2026/03/BestInductionCooktopinIndia_CompleteBuyingGuide-AdityaRetai.webp"
+                alt="Induction"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-white mb-2">Modern Cooking</h3>
+              <p class="text-xs text-gray-500 leading-relaxed">
+                High-performance induction cooktops designed for efficiency and
+                safety.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Showcase Gallery -->
+    <section id="gallery" class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-display text-4xl font-bold text-white mb-4">
+            Visual Showcase
+          </h2>
+          <p class="text-gray-500">
+            Experience the quality of our products and the precision of our
+            work.
+          </p>
+        </div>
+
+        <!-- Bento Grid Style Gallery -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+          <div
+            class="col-span-2 row-span-2 overflow-hidden rounded-3xl group relative cursor-pointer"
+            onclick="
+              openLightbox(
+                'https://opal.google/board/blobs/3299c062-41a1-4f12-8115-5a6e7f787c08',
+              )
+            "
+          >
+            <img
+              src="https://opal.google/board/blobs/3299c062-41a1-4f12-8115-5a6e7f787c08"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt="Gallery 1"
+            />
+            <div
+              class="absolute inset-0 bg-brand-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+            >
+              <span
+                class="text-white font-bold bg-brand-500 px-4 py-2 rounded-full"
+                >View Large</span
+              >
+            </div>
+          </div>
+          <div
+            class="col-span-2 overflow-hidden rounded-3xl group relative cursor-pointer"
+            onclick="
+              openLightbox(
+                'https://opal.google/board/blobs/6a758522-6b4f-4a65-9bde-fabeb93c2b4d',
+              )
+            "
+          >
+            <img
+              src="https://opal.google/board/blobs/6a758522-6b4f-4a65-9bde-fabeb93c2b4d"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt="Gallery 2"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-3xl group relative cursor-pointer"
+            onclick="
+              openLightbox(
+                'https://opal.google/board/blobs/437e2cf0-5f1f-412c-9345-6b73182e817a',
+              )
+            "
+          >
+            <img
+              src="https://opal.google/board/blobs/437e2cf0-5f1f-412c-9345-6b73182e817a"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt="Gallery 3"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-3xl group relative cursor-pointer"
+            onclick="
+              openLightbox(
+                'https://opal.google/board/blobs/a30a8008-9ee2-4bd5-84fa-e79fcdd78d0d',
+              )
+            "
+          >
+            <img
+              src="https://opal.google/board/blobs/a30a8008-9ee2-4bd5-84fa-e79fcdd78d0d"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt="Gallery 4"
+            />
+          </div>
+          <div
+            class="col-span-2 overflow-hidden rounded-3xl group relative cursor-pointer"
+            onclick="
+              openLightbox(
+                'https://opal.google/board/blobs/9547e34e-28be-4e36-960e-26f9fe83fbca',
+              )
+            "
+          >
+            <img
+              src="https://opal.google/board/blobs/9547e34e-28be-4e36-960e-26f9fe83fbca"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt="Gallery 5"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-3xl group relative cursor-pointer"
+            onclick="
+              openLightbox(
+                'https://opal.google/board/blobs/cf67d3e1-01c7-4dde-88e9-1b4f5c253bc2',
+              )
+            "
+          >
+            <img
+              src="https://opal.google/board/blobs/cf67d3e1-01c7-4dde-88e9-1b4f5c253bc2"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt="Gallery 6"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-3xl group relative cursor-pointer"
+            onclick="
+              openLightbox(
+                'https://opal.google/board/blobs/608a0db9-cc94-473e-aebf-5e19450feb95',
+              )
+            "
+          >
+            <img
+              src="data:image/jpeg;base64,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"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt="Gallery 7"
+            />
+          </div>
+        </div>
+
+        
+        <!-- Video Showcase -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-bold text-white mb-6 text-center">
+            Ground Report
+          </h3>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Video Card -->
+            <div
+              class="glass-card rounded-2xl overflow-hidden group cursor-pointer"
+              onclick="openVideoModal('videos/showcase video 1.mp4')"
+            >
+              <video
+                muted
+                loop
+                playsinline
+                class="w-full h-56 object-cover group-hover:scale-105 transition-all duration-500"
+                onmouseenter="this.play()"
+                onmouseleave="
+                  this.pause();
+                  this.currentTime = 0;
+                "
+              >
+                <source src="videos/showcase video 1.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div
+              class="glass-card rounded-2xl overflow-hidden group cursor-pointer"
+              onclick="openVideoModal('videos/showcase video 3.mp4')"
+            >
+              <video
+                muted
+                loop
+                playsinline
+                class="w-full h-56 object-cover group-hover:scale-105 transition-all duration-500"
+                onmouseenter="this.play()"
+                onmouseleave="
+                  this.pause();
+                  this.currentTime = 0;
+                "
+              >
+                <source src="videos/showcase video 3.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div
+              class="glass-card rounded-2xl overflow-hidden group cursor-pointer"
+              onclick="openVideoModal('videos/showcase video 2.mp4')"
+            >
+              <video
+                muted
+                loop
+                playsinline
+                class="w-full h-56 object-cover group-hover:scale-105 transition-all duration-500"
+                onmouseenter="this.play()"
+                onmouseleave="
+                  this.pause();
+                  this.currentTime = 0;
+                "
+              >
+                <source src="videos/showcase video 2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div
+      id="videoModal"
+      class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4"
+    >
+      <video
+        id="modalVideo"
+        controls
+        autoplay
+        muted
+        class="max-w-full max-h-full rounded-lg shadow-2xl"
+      ></video>
+
+      <button
+        onclick="closeVideoModal()"
+        class="absolute top-8 right-8 text-white hover:text-brand-500"
+      >
+        ✕
+      </button>
+    </div>
+    <!-- Call to Action / Contact -->
+    <section id="contact" class="py-24 bg-brand-500 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <svg
+          class="w-full h-full"
+          fill="currentColor"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <path d="M0 100 L100 0 L100 100 Z" />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div
+          class="glass-card bg-white/10 backdrop-blur-xl border-white/20 rounded-[3rem] p-12 lg:p-20 text-center text-white"
+        >
+          <h2 class="font-display text-4xl lg:text-6xl font-extrabold mb-8">
+            Ready to Optimize Your Space?
+          </h2>
+          <p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto">
+            Whether it's a routine repair or a full-scale commercial
+            installation, Tukai Electricals Solutions is ready to bring
+            precision to your project.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="tel:+918883464747"
+              class="px-10 py-5 border-2 border-white/30 text-white font-bold rounded-2xl hover:bg-white/10 transition-all"
+            >
+              Call Support Now
+            </a>
+          </div>
+
+          <div
+            class="mt-16 pt-16 border-t border-white/10 grid md:grid-cols-3 gap-8 text-left"
+          >
+            <div>
+              <h4
+                class="font-bold mb-4 uppercase tracking-widest text-xs opacity-70"
+              >
+                Our Location
+              </h4>
+              <p class="font-medium">
+                Pargaon Sa. Ma. Daund,<br />Maharashtra 412211,
+              </p>
+            </div>
+
+            <div>
+              <h4
+                class="font-bold mb-4 uppercase tracking-widest text-xs opacity-70"
+              >
+                Business Hours
+              </h4>
+              <p class="font-medium">Mon - Sun: 9:00 AM - 8:30 PM</p>
+            </div>
+
+            <div>
+              <h4
+                class="font-bold mb-4 uppercase tracking-widest text-xs opacity-70"
+              >
+                Contact Info
+              </h4>
+              <p class="font-medium">
+                prajwaltakawane@gmail.com<br />+91 8883464747
+              </p>
+            </div>
+          </div>
+
+          <!-- ✅ Developer Credit (Properly aligned) -->
+          <div
+            class="mt-12 pt-6 border-t border-white/10 text-center text-xx text-white/70"
+          >
+            <p>
+              Developed by
+              <span class="text-white font-semibold">
+                Pranil Takawane (  <a
+              href="https://www.instagram.com/pranil_x/"
+              target="_blank"
+              class="inline-block mt-2 text-white hover:underline"
+            >
+            
+            Pranil_x</a> )
+              </span>
+            </p>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox (Simple Implementation) -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4 cursor-zoom-out"
+      onclick="closeLightbox()"
+    >
+      <img
+        id="lightbox-img"
+        src=""
+        class="max-w-full max-h-full rounded-lg shadow-2xl"
+      />
+      <button
+        class="absolute top-8 right-8 text-white hover:text-brand-500 transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script>
+      // Smooth scroll listener for header shrink
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("h-16", "bg-neutral-950/90");
+          header.classList.remove("h-20");
+        } else {
+          header.classList.remove("h-16", "bg-neutral-950/90");
+          header.classList.add("h-20");
+        }
+      });
+
+      // Simple Lightbox Functionality
+      function openLightbox(src) {
+        const lb = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        img.src = src;
+        lb.classList.remove("hidden");
+        lb.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        const lb = document.getElementById("lightbox");
+        lb.classList.add("hidden");
+        lb.classList.remove("flex");
+        document.body.style.overflow = "auto";
+      }
+
+      // Open Video Modal
+      function openVideoModal(src) {
+        const modal = document.getElementById("videoModal");
+        const video = document.getElementById("modalVideo");
+
+        video.src = src;
+        video.muted = true; // ensure no sound
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      // Close Video Modal
+      function closeVideoModal() {
+        const modal = document.getElementById("videoModal");
+        const video = document.getElementById("modalVideo");
+
+        video.pause();
+        video.src = "";
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+
+        document.body.style.overflow = "auto";
+      }
+    </script>
+  </body>
+</html>
+<!-- The Business Name is "Tukai Electricals" in marathi- ""तुकाई इलेक्ट्रिकल्स" and used more marathi word into website because its for Marathi Audiencs so convert correct sentence with marathi , Address : " Pargaon Sa. Ma. Daund, Maharashtra 412211" and shop open for Full week Mon to Sun time 9 am to 8:30 pm, contact info phone no : 8883464747 used more marathi ok
+  -->
